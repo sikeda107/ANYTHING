@@ -6,3 +6,4 @@ print("test")
 
 self.fail('message')
 hoge
+hoge
