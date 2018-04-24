@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "MT.h"
+#include "./MersenneTwister/mt19937-64.h"
 #include <time.h>
 
 #define RATE 0.05
