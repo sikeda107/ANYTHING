@@ -12,6 +12,8 @@ int型1と0のxor演算子の結果を確認するプログラム
 ## test_mt.c
 乱数生成装置メルセンヌツイスタの実行確認プログラム  
 [64bit版 Mersenne Twister](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/mt64.html)
+## test_probability.c
+乱数生成装置メルセンヌツイスタを用いた設定した確率で真を返す関数を確認するプログラム
 ## test_fileIO.c
 複数ファイルを出力する方法を確認するプログラム
 ## sample_matplotlib.py
