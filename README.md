@@ -18,3 +18,5 @@ int型1と0のxor演算子の結果を確認するプログラム
 複数ファイルを出力する方法を確認するプログラム
 ## sample_matplotlib.py
 python3 Matplotlibによるグラフ描画サンプルプログラム
+## sample_imagedraw.py
+python3 pillow-5.1.0による画像描画サンプル
