@@ -19,7 +19,16 @@ import csv # ファイル読み込み用
 csv_file = "drawGA.csv"
 
 with open(csv_file, 'r') as f:
-    reader = csv.reader(f, delimiter='\t')
-    print(reader)
-    print(next(reader))
-    print(next(reader))
+    reader = csv.reader(f, delimiter='\t')  # tab区切りでcsv読み込み
+    row = list()  # rowをリストとして初期化
+    for row_tmp in reader:
+        row.append(row_tmp)  # 1行ずつ読み込んでrowリストの末尾へrow_tmpリストを追加
+
+    print(row[0])
+    print(len(row))
+
+    i = 1
+    for tmp in row:
+        print(row)
+        print("{0}".format(i))
+        i+=1
