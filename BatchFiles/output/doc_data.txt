@@ -1,0 +1,38 @@
+InfoBegin
+InfoKey: Creator
+InfoValue: Microsoft&#174; Word 2016
+InfoBegin
+InfoKey: Producer
+InfoValue: Microsoft&#174; Word 2016
+InfoBegin
+InfoKey: Author
+InfoValue: &#27744;&#30000;&#23558;
+InfoBegin
+InfoKey: ModDate
+InfoValue: D:20180516235554+09'00'
+InfoBegin
+InfoKey: CreationDate
+InfoValue: D:20180516235554+09'00'
+PdfID0: b2e0d76c2346d14486bbf334d7b8b9b7
+PdfID1: b2e0d76c2346d14486bbf334d7b8b9b7
+NumberOfPages: 4
+PageMediaBegin
+PageMediaNumber: 1
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.32 841.92
+PageMediaDimensions: 595.32 841.92
+PageMediaBegin
+PageMediaNumber: 2
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.32 841.92
+PageMediaDimensions: 595.32 841.92
+PageMediaBegin
+PageMediaNumber: 3
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.32 841.92
+PageMediaDimensions: 595.32 841.92
+PageMediaBegin
+PageMediaNumber: 4
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.32 841.92
+PageMediaDimensions: 595.32 841.92
