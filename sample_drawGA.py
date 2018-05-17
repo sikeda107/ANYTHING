@@ -4,31 +4,57 @@
 
 from PIL import Image, ImageDraw, ImageFont
 import csv # ファイル読み込み用
+import pandas as pd
 
-# # new(mode:string,size:turple,color:turple):Image
-# im = Image.new("RGB", (512, 512), (128, 128, 128)) # 新しい画像を作る
-# draw = ImageDraw.Draw(im) # 画像に絵を描く準備
-#
-# # 画像に絵を描く
-# draw.rectangle((100, 100, 200, 200), fill=(0, 255, 0)) # 四角.rectangle((左上点,右下点),塗つぶし色,線色)
-# draw.ellipse((250, 300, 450, 400), fill=(0, 0, 255)) # 円.ellipse((左上点,右下点),塗つぶし色,線色)
-# draw.line((150,150,350,350), fill=(255, 0, 0), width=8)
-# im.show() # 画像の表示
-# im.save("sample_imagedraw.png") # 画像の保存
+# new(mode:string,size:turple,color:turple):Image
+im = Image.new("RGB", (3800, 2100), (0, 0, 0)) # 新しい画像を作る
+# im = Image.new("RGB", (800, 800), (0, 0, 0)) # 新しい画像を作る
+draw = ImageDraw.Draw(im) # 画像に絵を描く準備
 
 csv_file = "drawGA.csv"
+# csv_file = "drawgui.csv"
 
 with open(csv_file, 'r') as f:
     reader = csv.reader(f, delimiter='\t')  # tab区切りでcsv読み込み
+    # reader = csv.reader(f, delimiter=' ')  # スペース区切りでcsv読み込み
     row = list()  # rowをリストとして初期化
     for row_tmp in reader:
+        # row_tmp.pop()  # 最後の改行を削除
+        row_tmp = list(map(lambda x:int(x),row_tmp))  # mapで全ての要素へint()を適用し、mapをlistへ変換
         row.append(row_tmp)  # 1行ずつ読み込んでrowリストの末尾へrow_tmpリストを追加
 
-    print(row[0])
-    print(len(row))
+    R = 255
+    G = 255
+    B = 255
+    i = 0
+    y1 = 0
+    for row_elem in row:
+        if i%2 == 0:
+            tmp = row_elem
+            pass
+        elif i%2 == 1:
+            for x1, x2 in zip(tmp,row_elem):
+                y2 = y1+1
+                if x1 == 15 :
+                    R = 0
+                    G = 0
+                    B = 255
+                    pass
+                else :
+                    R = 255
+                    G = 0
+                    B = 0
+                    pass
+                draw.rectangle((x1*100-5, y1*100-5,x1*100+5, y1*100+5), fill=(0, 255, 0))
+                draw.rectangle((x2*100-5, y2*100-5,x2*100+5, y2*100+5), fill=(0, 255, 0))
+                draw.line((x1*100,y1*100,x2*100,y2*100), fill=(R, G, B), width=1)
+                pass
+            y1 += 1
+            pass
+        else :
+            pass
+        i += 1
+        pass
 
-    i = 1
-    for tmp in row:
-        print(row)
-        print("{0}".format(i))
-        i+=1
+im.show() # 画像の表示
+im.save("drawgui.png") # 画像の保存
