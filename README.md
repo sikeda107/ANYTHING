@@ -20,3 +20,7 @@ int型1と0のxor演算子の結果を確認するプログラム
 python3 Matplotlibによるグラフ描画サンプルプログラム
 ## sample_imagedraw.py
 python3 pillow-5.1.0による画像描画サンプル
+## test_macro.c
+いろいろなマクロを試すプログラム
+1. 変数名の取得
+1. 組み込みマクロ
