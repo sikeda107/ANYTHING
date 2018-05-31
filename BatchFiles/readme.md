@@ -1,4 +1,4 @@
-# splitpdf.bat 解説
+# splitpdf-old.bat 解説
 ## コード全体
 ```
 @echo off
@@ -23,6 +23,23 @@ del filename.txt
 `pdftk sample.pdf burst output burstout%%d.pdf` pdftkを用いてpdfを分割して出力  
 `^` - など特殊文字表示。
 
+## splitpdf-new.batへ変更
+日付: 2018年5月31日
+```
+@echo off
+for %%a in (*.pdf) do (
+ pdftk "%%a" burst output "output\%%~na-%%d.pdf"
+)
+```
+### 変更理由
+* スペースを含むファイルが扱えない
+
+### 変更点
+* filename.txtへのファイル名の出力をやめる  
+-> ファイル名をダブルクオーテーション""　で囲む
+
+### コメント
+簡潔だし　なんでこっちでやらなかったのかわけがわからないよ
 
 ## 参考
 1. [pdftkの簡単な使い方とPDFの操作](https://jidouka.work/?p=304)
